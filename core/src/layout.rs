@@ -43,5 +43,7 @@ pub fn process_layout(
     // Calculate the viewports
     let viewports_collection = calculate_viewports(&layers_nums, &layers, fdom);
 
+    println!(" {} / {:?} / {:?} / {:?}",rdom.tree_ref().len() ,fdom.layout().results.len(), layers.layers.len(), viewports_collection.len());
+
     (layers, viewports_collection)
 }
