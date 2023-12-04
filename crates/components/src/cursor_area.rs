@@ -12,6 +12,11 @@ pub struct CursorAreaProps<'a> {
     children: Element<'a>,
 }
 
+/// `CursorArea` component.
+///
+/// # Props
+/// See [`CursorAreaProps`].
+///
 /// # Example
 ///
 /// ```no_run

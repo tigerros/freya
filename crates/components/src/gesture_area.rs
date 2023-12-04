@@ -36,6 +36,11 @@ pub struct GestureAreaProps<'a> {
 
 type EventsQueue = VecDeque<(Instant, TouchEvent)>;
 
+/// `GestureArea` component.
+///
+/// # Props
+/// See [`GestureAreaProps`].
+///
 /// # Example
 ///
 /// ```rust
@@ -52,6 +57,7 @@ type EventsQueue = VecDeque<(Instant, TouchEvent)>;
 ///    )
 /// }
 /// ```
+///
 #[allow(non_snake_case)]
 pub fn GestureArea<'a>(cx: Scope<'a, GestureAreaProps<'a>>) -> Element {
     let touch_events = use_ref::<EventsQueue>(cx, VecDeque::new);

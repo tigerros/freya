@@ -19,6 +19,10 @@ pub struct CanvasProps {
 }
 
 /// Draw anything inside of this canvas.
+///
+/// # Props
+/// See [`CanvasProps`].
+///
 #[allow(non_snake_case)]
 pub fn Canvas(cx: Scope<CanvasProps>) -> Element {
     render!(rect {

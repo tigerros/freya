@@ -53,6 +53,11 @@ pub struct InputProps<'a> {
     margin: String,
 }
 
+/// `Input` component.
+///
+/// # Props
+/// See [`InputProps`].
+///
 /// # Styling
 /// Inherits the [`ButtonTheme`](freya_hooks::ButtonTheme) theme.
 ///

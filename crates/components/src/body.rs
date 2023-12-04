@@ -12,7 +12,12 @@ pub struct BodyProps<'a> {
     padding: String,
 }
 
+/// `Body` component.
+///
 /// Usually just used one time and as a root component for all the app.
+///
+/// # Props
+/// See [`BodyProps`].
 ///
 /// # Styling
 /// Inherits the [`BodyTheme`](freya_hooks::BodyTheme) theme.
@@ -31,6 +36,7 @@ pub struct BodyProps<'a> {
 ///     )
 /// }
 /// ```
+///
 #[allow(non_snake_case)]
 pub fn Body<'a>(cx: Scope<'a, BodyProps<'a>>) -> Element {
     let theme = use_get_theme(cx);

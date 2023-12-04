@@ -20,6 +20,11 @@ pub struct ProgressBarProps {
     pub progress: f32,
 }
 
+/// `ProgressBar` component.
+///
+/// # Props
+/// See [`ProgressBarProps`].
+///
 /// # Styling
 /// Inherits the [`ProgressBarTheme`](freya_hooks::ProgressBarTheme) theme.
 ///

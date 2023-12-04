@@ -9,8 +9,14 @@ use tokio::time::interval;
 #[derive(Props, PartialEq)]
 pub struct LoaderProps {}
 
+/// `Loader` component.
+///
+/// # Props
+/// See [`LoaderProps`].
+///
 /// # Styling
 /// Inherits the [`LoaderTheme`](freya_hooks::LoaderTheme) theme.
+///
 #[allow(non_snake_case)]
 pub fn Loader(cx: Scope<LoaderProps>) -> Element {
     let theme = use_get_theme(cx);

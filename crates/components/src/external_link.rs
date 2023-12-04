@@ -22,6 +22,9 @@ pub struct ExternalLinkProps<'a> {
 
 /// `Link` for external locations, e.g websites.
 ///
+/// # Props
+/// See [`ExternalLinkProps`].
+///
 /// # Styling
 /// Inherits the [`ExternalLinkTheme`](freya_hooks::ExternalLinkTheme) theme.
 ///
@@ -40,6 +43,7 @@ pub struct ExternalLinkProps<'a> {
 ///     )
 /// }
 /// ```
+///
 #[allow(non_snake_case)]
 pub fn ExternalLink<'a>(cx: Scope<'a, ExternalLinkProps<'a>>) -> Element {
     let theme = use_get_theme(cx);

@@ -34,6 +34,11 @@ pub struct ScrollViewProps<'a> {
     pub scroll_with_arrows: bool,
 }
 
+/// `ScrollView` component.
+///
+/// # Props
+/// See [`ScrollViewProps`](ScrollViewProps).
+///
 /// # Example
 ///
 /// ```no_run

@@ -102,6 +102,7 @@ impl<'a> AnimationManager<'a> {
 ///     )
 /// }
 /// ```
+///
 pub fn use_animation(cx: &ScopeState, init_value: impl FnOnce() -> f64) -> AnimationManager {
     let current_animation_id = use_state(cx, || None);
     let init_value = *cx.use_hook(init_value);
