@@ -70,11 +70,6 @@ fn get_render_range(
     render_index_start as usize..(render_index_end as usize)
 }
 
-/// `VirtualScrollView` component.
-///
-/// # Props
-/// See [`VirtualScrollViewProps`](VirtualScrollViewProps).
-///
 /// # Example
 ///
 /// ```no_run

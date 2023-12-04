@@ -39,11 +39,6 @@ pub enum ButtonStatus {
     Hovering,
 }
 
-/// `Button` component.
-///
-/// # Props
-/// See [`ButtonProps`].
-///
 /// # Styling
 /// Inherits the [`ButtonTheme`](freya_hooks::ButtonTheme) theme.
 ///
@@ -62,7 +57,6 @@ pub enum ButtonStatus {
 ///     )
 /// }
 /// ```
-///
 #[allow(non_snake_case)]
 pub fn Button<'a>(cx: Scope<'a, ButtonProps<'a>>) -> Element {
     let focus = use_focus(cx);

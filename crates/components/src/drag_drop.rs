@@ -12,10 +12,6 @@ pub struct DragProviderProps<'a> {
 }
 
 /// Provide a common place for [`DragZone`]s and [`DropZone`]s to exchange their data.
-///
-/// # Props
-/// See [`DragProviderProps`].
-///
 #[allow(non_snake_case)]
 pub fn DragProvider<'a, T: 'static>(cx: Scope<'a, DragProviderProps<'a>>) -> Element<'a> {
     use_shared_state_provider::<Option<T>>(cx, || None);
@@ -34,10 +30,6 @@ pub struct DragZoneProps<'a, T> {
 }
 
 /// Make the inner children draggable to other [`DropZone`].
-///
-/// # Props
-/// See [`DragZoneProps`].
-///
 #[allow(non_snake_case)]
 pub fn DragZone<'a, T: 'static + Clone>(cx: Scope<'a, DragZoneProps<'a, T>>) -> Element<'a> {
     let drags = use_shared_state::<Option<T>>(cx);
@@ -113,10 +105,6 @@ pub struct DropZoneProps<'a, T> {
 }
 
 /// Elements from [`DragZone`]s can be dropped here.
-///
-/// # Props
-/// See [`DropZoneProps`].
-///
 #[allow(non_snake_case)]
 pub fn DropZone<'a, T: 'static + Clone>(cx: Scope<'a, DropZoneProps<'a, T>>) -> Element<'a> {
     let drags = use_shared_state::<Option<T>>(cx);

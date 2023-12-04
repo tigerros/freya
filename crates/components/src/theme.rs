@@ -12,10 +12,6 @@ pub struct ThemeProviderProps<'a> {
 }
 
 /// Provides a `Theme` for all its children.
-///
-/// # Props
-/// See [`ThemeProviderProps`]
-///
 #[allow(non_snake_case)]
 pub fn ThemeProvider<'a>(cx: Scope<'a, ThemeProviderProps<'a>>) -> Element<'a> {
     use_init_theme(cx, cx.props.theme.clone().unwrap_or_default());

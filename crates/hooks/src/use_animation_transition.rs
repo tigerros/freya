@@ -270,7 +270,6 @@ impl<'a> TransitionsManager<'a> {
 ///     )
 /// }
 /// ```
-///
 pub fn use_animation_transition<D>(
     cx: &ScopeState,
     transition: TransitionAnimation,

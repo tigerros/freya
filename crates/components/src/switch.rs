@@ -25,9 +25,6 @@ pub enum SwitchStatus {
 
 /// Controlled `Switch` component.
 ///
-/// # Props
-/// See [`SwitchProps`].
-///
 /// # Styling
 /// Inherits the [`SwitchTheme`](freya_hooks::SwitchTheme) theme.
 ///
@@ -48,7 +45,6 @@ pub enum SwitchStatus {
 ///     )
 /// }
 /// ```
-///
 #[allow(non_snake_case)]
 pub fn Switch<'a>(cx: Scope<'a, SwitchProps<'a>>) -> Element<'a> {
     let animation = use_animation(cx, || 0.0);

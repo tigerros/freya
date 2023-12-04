@@ -45,11 +45,6 @@ pub enum ImageStatus {
     Loaded,
 }
 
-/// `NetworkImage` component.
-///
-/// # Props
-/// See [`NetworkImageProps`].
-///
 /// # Example
 ///  
 /// ```rust

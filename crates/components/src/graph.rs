@@ -36,11 +36,6 @@ pub struct GraphProps {
     height: String,
 }
 
-/// Graph component.
-///
-/// # Props
-/// See [`GraphProps`].
-///
 #[allow(non_snake_case)]
 pub fn Graph(cx: Scope<GraphProps>) -> Element {
     let platform = use_platform(cx);
