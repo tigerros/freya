@@ -15,11 +15,18 @@ impl Parse for Size {
         } else if value == "fill" {
             Ok(Size::Fill)
         } else if value.contains("calc") {
-            Ok(Size::DynamicCalculations(parse_calc(value)?))
+            Ok(Size::DynamicCalculations(Box::new(parse_calc(value)?)))
         } else if value.contains('%') {
             Ok(Size::Percentage(Length::new(
                 value
                     .replace('%', "")
+                    .parse::<f32>()
+                    .map_err(|_| ParseSizeError)?,
+            )))
+        } else if value.contains('v') {
+            Ok(Size::RootPercentage(Length::new(
+                value
+                    .replace('v', "")
                     .parse::<f32>()
                     .map_err(|_| ParseSizeError)?,
             )))
